@@ -1,0 +1,142 @@
+/* ==========================================================================
+   GLOBAL DESIGN SYSTEM & STYLES - PHARMASTOCK PRO
+   ========================================================================== */
+
+:root {
+  /* Color Palette - Vibrant Modern Medical Tech */
+  --primary: #0ea5e9;
+  --primary-hover: #0284c7;
+  --primary-light: rgba(14, 165, 233, 0.12);
+  --primary-glow: rgba(14, 165, 233, 0.35);
+
+  --teal-accent: #14b8a6;
+  --teal-glow: rgba(20, 184, 166, 0.25);
+
+  /* Semáforo Status Colors */
+  --semaforo-rojo: #ef4444;
+  --semaforo-rojo-bg: rgba(239, 68, 68, 0.12);
+  --semaforo-rojo-border: rgba(239, 68, 68, 0.3);
+  --semaforo-rojo-glow: rgba(239, 68, 68, 0.4);
+
+  --semaforo-amarillo: #f59e0b;
+  --semaforo-amarillo-bg: rgba(245, 158, 11, 0.12);
+  --semaforo-amarillo-border: rgba(245, 158, 11, 0.3);
+  --semaforo-amarillo-glow: rgba(245, 158, 11, 0.4);
+
+  --semaforo-verde: #10b981;
+  --semaforo-verde-bg: rgba(16, 185, 129, 0.12);
+  --semaforo-verde-border: rgba(16, 185, 129, 0.3);
+  --semaforo-verde-glow: rgba(16, 185, 129, 0.4);
+
+  /* Dark Theme Surfaces */
+  --bg-dark: #0f172a;
+  --bg-dark-card: #1e293b;
+  --bg-dark-hover: #334155;
+  --bg-glass: rgba(30, 41, 59, 0.75);
+
+  /* Light Theme Surfaces */
+  --bg-light: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+
+  /* Typography Colors */
+  --text-main: #0f172a;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --text-inverse: #ffffff;
+
+  /* Utility Colors */
+  --border-color: #e2e8f0;
+  --border-focus: #38bdf8;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 20px rgba(14, 165, 233, 0.25);
+
+  /* Radius & Transitions */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  --transition-fast: all 0.18s ease-in-out;
+  --transition-normal: all 0.3s ease;
+}
+
+/* Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6); }
+  70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.fade-in {
+  animation: fadeIn 0.35s ease-out forwards;
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+/* Custom Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
